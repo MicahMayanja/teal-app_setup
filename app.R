@@ -10,6 +10,10 @@ app <- teal::init(
   modules = teal::example_module(
     label = "Example Module!"
   ),
+  filter = teal_slices(
+    teal_slice(dataname = "iris", varname = "Species", selected = "setosa"),
+    teal_slice(dataname = "iris", varname = "Sepal.Length")
+  ),
   header = "My first teal cup",
   footer = "This is a test."
 )
